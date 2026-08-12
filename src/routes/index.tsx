@@ -36,8 +36,9 @@ function Index() {
       <main>
         <Hero />
         <Targeting />
-
+        <CampaignForm />
       </main>
+
     </>
   );
 }

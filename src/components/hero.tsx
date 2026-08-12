@@ -8,7 +8,7 @@ function AdPerformanceMockup() {
       <div className="absolute -bottom-10 -right-10 h-36 w-36 rounded-full bg-cream/60 blur-3xl animate-pulse-soft animation-delay-300" />
 
       {/* Main dashboard card */}
-      <div className="relative rounded-2xl border border-border bg-white p-5 shadow-xl shadow-navy/5 animate-float">
+      <div className="relative rounded-2xl border border-border bg-card p-5 shadow-xl shadow-navy/5 animate-float">
         <div className="mb-4 flex items-center justify-between">
           <div>
             <p className="text-xs font-medium text-muted-foreground">Ad Campaign Performance</p>
@@ -33,7 +33,7 @@ function AdPerformanceMockup() {
 
         {/* Stat cards */}
         <div className="grid grid-cols-2 gap-3">
-          <div className="rounded-xl border border-border bg-white p-3 shadow-sm">
+          <div className="rounded-xl border border-border bg-card p-3 shadow-sm">
             <div className="mb-1 flex items-center gap-1.5 text-xs text-muted-foreground">
               <Eye className="h-3.5 w-3.5 text-gold" />
               Impressions
@@ -41,7 +41,7 @@ function AdPerformanceMockup() {
             <p className="text-lg font-bold text-navy">48.2K</p>
             <p className="text-xs font-medium text-gold-dark">+18%</p>
           </div>
-          <div className="rounded-xl border border-border bg-white p-3 shadow-sm">
+          <div className="rounded-xl border border-border bg-card p-3 shadow-sm">
             <div className="mb-1 flex items-center gap-1.5 text-xs text-muted-foreground">
               <MousePointerClick className="h-3.5 w-3.5 text-gold" />
               Clicks
@@ -49,7 +49,7 @@ function AdPerformanceMockup() {
             <p className="text-lg font-bold text-navy">3,840</p>
             <p className="text-xs font-medium text-gold-dark">+24%</p>
           </div>
-          <div className="rounded-xl border border-border bg-white p-3 shadow-sm">
+          <div className="rounded-xl border border-border bg-card p-3 shadow-sm">
             <div className="mb-1 flex items-center gap-1.5 text-xs text-muted-foreground">
               <Users className="h-3.5 w-3.5 text-gold" />
               Leads
@@ -57,7 +57,7 @@ function AdPerformanceMockup() {
             <p className="text-lg font-bold text-navy">312</p>
             <p className="text-xs font-medium text-gold-dark">+41%</p>
           </div>
-          <div className="rounded-xl border border-border bg-white p-3 shadow-sm">
+          <div className="rounded-xl border border-border bg-card p-3 shadow-sm">
             <div className="mb-1 flex items-center gap-1.5 text-xs text-muted-foreground">
               <TrendingUp className="h-3.5 w-3.5 text-gold" />
               ROI
@@ -69,7 +69,7 @@ function AdPerformanceMockup() {
       </div>
 
       {/* Floating phone card */}
-      <div className="absolute -bottom-6 -left-6 hidden w-44 rounded-2xl border border-border bg-white p-4 shadow-xl shadow-navy/5 sm:block animate-float animation-delay-200">
+      <div className="absolute -bottom-6 -left-6 hidden w-44 rounded-2xl border border-border bg-card p-4 shadow-xl shadow-navy/5 sm:block animate-float animation-delay-200">
         <div className="mb-2 flex items-center gap-2">
           <div className="h-8 w-8 rounded-full bg-gold-light" />
           <div>
@@ -143,7 +143,7 @@ export function Hero() {
                 {[1, 2, 3, 4].map((i) => (
                   <div
                     key={i}
-                    className="inline-flex h-10 w-10 items-center justify-center rounded-full border-2 border-white bg-muted text-xs font-semibold text-muted-foreground shadow-sm"
+                    className="inline-flex h-10 w-10 items-center justify-center rounded-full border-2 border-background bg-muted text-xs font-semibold text-muted-foreground shadow-sm"
                     style={{ backgroundColor: `oklch(${0.85 + i * 0.02} 0.03 ${260 + i * 10})` }}
                   >
                     {String.fromCharCode(64 + i)}

@@ -26,7 +26,7 @@ export function Navbar() {
       className={cn(
         "fixed inset-x-0 top-0 z-50 transition-all duration-300",
         scrolled
-          ? "bg-white/95 shadow-sm backdrop-blur-sm"
+          ? "bg-card/95 shadow-sm backdrop-blur-sm"
           : "bg-transparent"
       )}
       style={{
@@ -98,7 +98,7 @@ export function Navbar() {
       {/* Mobile menu */}
       <div
         className={cn(
-          "overflow-hidden border-b border-border bg-white transition-all duration-300 md:hidden",
+          "overflow-hidden border-b border-border bg-card transition-all duration-300 md:hidden",
           mobileOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
         )}
       >

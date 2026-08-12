@@ -110,8 +110,10 @@ export function Hero() {
 
             <h1 className="opacity-0 animate-fade-in-up animation-delay-100 text-4xl font-extrabold leading-tight tracking-tight text-navy sm:text-5xl lg:text-6xl">
               Helping Kuwait&apos;s Local Businesses Get More Customers Through{" "}
-              <span className="text-gold">Facebook & Instagram Ads</span>
+              <span className="text-[#1877F2]">Facebook</span> &{" "}
+              <span className="text-brand-red">Instagram</span> Ads
             </h1>
+
 
             <p className="opacity-0 animate-fade-in-up animation-delay-200 mt-6 text-lg leading-relaxed text-muted-foreground sm:text-xl">
               Done-for-you Meta Ads management for restaurants, gyms, salons, and cafes across

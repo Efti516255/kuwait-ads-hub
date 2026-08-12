@@ -1,6 +1,8 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Navbar } from "@/components/navbar";
 import { Hero } from "@/components/hero";
+import { Targeting } from "@/components/targeting";
+
 
 export const Route = createFileRoute("/")({
   component: Index,
@@ -30,6 +32,8 @@ function Index() {
       <Navbar />
       <main>
         <Hero />
+        <Targeting />
+
       </main>
     </>
   );

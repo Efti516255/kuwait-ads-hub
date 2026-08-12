@@ -2,6 +2,9 @@ import { createFileRoute } from "@tanstack/react-router";
 import { Navbar } from "@/components/navbar";
 import { Hero } from "@/components/hero";
 import { Targeting } from "@/components/targeting";
+import { CampaignForm } from "@/components/campaign-form";
+
+
 
 
 export const Route = createFileRoute("/")({

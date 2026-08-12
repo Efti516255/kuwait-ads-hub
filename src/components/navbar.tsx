@@ -26,11 +26,11 @@ export function Navbar() {
       className={cn(
         "fixed inset-x-0 top-0 z-50 transition-all duration-300",
         scrolled
-          ? "bg-card/95 shadow-sm backdrop-blur-sm"
+          ? "bg-background/95 shadow-sm backdrop-blur-sm"
           : "bg-transparent"
       )}
       style={{
-        borderBottom: scrolled ? "1px solid var(--color-border)" : "1px solid transparent",
+        borderBottom: scrolled ? "1px solid var(--color-navbar-border)" : "1px solid transparent",
       }}
     >
       <nav className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">

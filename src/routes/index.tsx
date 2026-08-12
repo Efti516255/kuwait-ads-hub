@@ -32,6 +32,8 @@ function Index() {
       <Navbar />
       <main>
         <Hero />
+        <Targeting />
+
       </main>
     </>
   );

@@ -213,6 +213,8 @@ export function CampaignForm() {
   const [errors, setErrors] = useState<{ businessName?: string; whatsapp?: string }>({});
   const [submitted, setSubmitted] = useState(false);
 
+  const WHATSAPP_NUMBER = "96597735701";
+
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     const next: typeof errors = {};
@@ -221,19 +223,31 @@ export function CampaignForm() {
     setErrors(next);
     if (Object.keys(next).length > 0) return;
 
-    const payload = {
-      ageRange: age,
-      gender,
-      location,
-      interests,
-      duration,
-      budget,
-      businessName,
-      businessType,
-      whatsapp,
-      notes,
-    };
-    console.log("Campaign plan request:", payload);
+    const ageLabel = `${age[0]} – ${age[1] === MAX_AGE ? "65+" : age[1]}`;
+
+    const message = [
+      "New Campaign Plan Request — Kuwait Ads Hub",
+      "",
+      `Business Name: ${businessName.trim()}`,
+      `Business Type: ${businessType || "Not specified"}`,
+      `WhatsApp: ${whatsapp.trim()}`,
+      "",
+      "Target Audience:",
+      `- Age: ${ageLabel}`,
+      `- Gender: ${gender}`,
+      `- Location: ${location.trim() || "Not specified"}`,
+      `- Interests: ${interests.trim() || "Not specified"}`,
+      "",
+      `Campaign Duration: ${duration || "Not specified"}`,
+      `Monthly Budget: ${budget || "Not specified"}`,
+      "",
+      `Additional Notes: ${notes.trim() || "None"}`,
+    ].join("\n");
+
+    const encodedMessage = encodeURIComponent(message);
+    const whatsappUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodedMessage}`;
+
+    window.open(whatsappUrl, "_blank", "noopener,noreferrer");
     setSubmitted(true);
   };
 

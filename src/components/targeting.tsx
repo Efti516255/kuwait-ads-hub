@@ -178,7 +178,7 @@ export function Targeting() {
     <section id="targeting" className="bg-section py-20 lg:py-28">
       <div
         ref={ref}
-        className={`mx-auto max-w-7xl px-4 transition-all duration-700 ease-out sm:px-6 lg:px-8 ${
+        className={`mx-auto max-w-7xl px-4 transition-all duration-500 ease-out sm:px-6 lg:px-8 ${
           visible ? "translate-y-0 opacity-100" : "translate-y-6 opacity-0"
         }`}
       >
@@ -199,10 +199,10 @@ export function Targeting() {
             {features.map((f, i) => (
               <div
                 key={f.title}
-                className={`flex gap-4 transition-all duration-700 ease-out ${
+                className={`flex gap-4 transition-all duration-500 ease-out ${
                   visible ? "translate-y-0 opacity-100" : "translate-y-4 opacity-0"
                 }`}
-                style={{ transitionDelay: `${150 + i * 120}ms` }}
+                style={{ transitionDelay: `${100 + i * 70}ms` }}
               >
                 <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-brand-red-light">
                   <f.icon className="h-5 w-5 text-brand-red" />

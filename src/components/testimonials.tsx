@@ -80,7 +80,7 @@ const row2: Testimonial[] = [
 
 function Card({ t }: { t: Testimonial }) {
   return (
-    <figure className="w-[320px] shrink-0 rounded-2xl border border-border bg-card p-6 shadow-sm shadow-navy/5">
+    <figure className="mr-6 w-[320px] shrink-0 rounded-2xl border border-border bg-card p-6 shadow-sm shadow-navy/5">
       <blockquote className="text-sm leading-relaxed text-muted-foreground">
         “{t.quote}”
       </blockquote>
@@ -113,7 +113,7 @@ function MarqueeRow({
   return (
     <div className="group relative overflow-hidden">
       <div
-        className="flex w-max gap-6 py-3 group-hover:[animation-play-state:paused]"
+        className="flex w-max py-3 group-hover:[animation-play-state:paused]"
         style={{
           animation: `${reverse ? "marquee-reverse" : "marquee"} ${duration}s linear infinite`,
         }}

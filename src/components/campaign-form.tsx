@@ -255,7 +255,7 @@ export function CampaignForm() {
     <section id="plan" className="py-20 lg:py-28">
       <div
         ref={ref}
-        className={`mx-auto max-w-4xl px-4 transition-all duration-700 ease-out sm:px-6 lg:px-8 ${
+        className={`mx-auto max-w-4xl px-4 transition-all duration-500 ease-out sm:px-6 lg:px-8 ${
           visible ? "translate-y-0 opacity-100" : "translate-y-6 opacity-0"
         }`}
       >

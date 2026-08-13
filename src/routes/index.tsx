@@ -3,6 +3,8 @@ import { Navbar } from "@/components/navbar";
 import { Hero } from "@/components/hero";
 import { Targeting } from "@/components/targeting";
 import { CampaignForm } from "@/components/campaign-form";
+import { Testimonials } from "@/components/testimonials";
+import { FAQ } from "@/components/faq";
 
 
 
@@ -37,6 +39,8 @@ function Index() {
         <Hero />
         <Targeting />
         <CampaignForm />
+        <Testimonials />
+        <FAQ />
       </main>
 
     </>

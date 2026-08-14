@@ -24,7 +24,7 @@ export function Navbar() {
   return (
     <header
       className={cn(
-        "fixed inset-x-0 top-0 z-50 transition-all duration-300",
+        "fixed inset-x-0 top-9 z-50 transition-all duration-300",
         scrolled
           ? "bg-background/95 shadow-sm backdrop-blur-sm"
           : "bg-transparent"
@@ -67,22 +67,10 @@ export function Navbar() {
           >
             Log In
           </a>
-          <a
-            href="#contact"
-            className="inline-flex items-center justify-center rounded-full bg-primary px-5 py-2.5 text-sm font-semibold text-primary-foreground shadow-sm transition-all hover:bg-gold-dark hover:shadow-md"
-          >
-            Free Discussion & Plan
-          </a>
         </div>
 
-        {/* Mobile toggle + CTA */}
+        {/* Mobile toggle */}
         <div className="flex items-center gap-2 md:hidden">
-          <a
-            href="#contact"
-            className="inline-flex items-center justify-center rounded-full bg-primary px-3 py-1.5 text-xs font-semibold text-primary-foreground shadow-sm transition-all hover:bg-gold-dark"
-          >
-            Free Plan
-          </a>
           <button
             type="button"
             onClick={() => setMobileOpen((v) => !v)}

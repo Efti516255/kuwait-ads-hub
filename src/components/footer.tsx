@@ -15,7 +15,7 @@ export function Footer() {
     <footer id="contact" className="bg-navy py-16 text-white lg:py-20">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         {/* Top row */}
-        <div className="grid gap-12 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="grid gap-12 sm:grid-cols-2 lg:grid-cols-3">
           {/* Brand */}
           <div className="space-y-5">
             <a href="#home" className="flex items-center gap-2 text-lg font-bold tracking-tight text-white">
@@ -91,34 +91,13 @@ export function Footer() {
               </li>
               <li>
                 <a
-                  href="mailto:hello@kuwaitadshub.com"
+                  href="mailto:kuwaitadshub@gmail.com"
                   className="transition-colors hover:text-gold"
                 >
-                  hello@kuwaitadshub.com
+                  kuwaitadshub@gmail.com
                 </a>
               </li>
             </ul>
-          </div>
-
-          {/* Language */}
-          <div>
-            <h4 className="mb-5 text-sm font-bold uppercase tracking-wider text-white">Language</h4>
-            <div className="inline-flex items-center rounded-full border border-white/20 bg-white/5 p-1">
-              <button
-                type="button"
-                aria-label="English"
-                className="rounded-full bg-white px-3 py-1.5 text-xs font-semibold text-navy"
-              >
-                EN
-              </button>
-              <button
-                type="button"
-                aria-label="Arabic"
-                className="px-3 py-1.5 text-xs font-semibold text-white/70 transition-colors hover:text-white"
-              >
-                AR
-              </button>
-            </div>
           </div>
         </div>
 

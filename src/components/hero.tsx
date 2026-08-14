@@ -35,19 +35,19 @@ export function Hero() {
               Kuwait.
             </p>
 
-            <div className="opacity-0 animate-fade-in-up animation-delay-300 mt-8 flex flex-col gap-3 sm:flex-row">
+            <div className="opacity-0 animate-fade-in-up animation-delay-300 mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
               <a
                 href="#contact"
-                className="group inline-flex items-center justify-center gap-2 rounded-full bg-primary px-7 py-3.5 text-base font-semibold text-primary-foreground shadow-md shadow-gold/20 transition-all hover:bg-gold-dark hover:shadow-lg hover:shadow-gold/25"
+                className="group inline-flex w-full items-center justify-center gap-2 rounded-full bg-primary px-7 py-3.5 text-base font-semibold text-primary-foreground shadow-md shadow-gold/20 transition-all hover:bg-gold-dark hover:shadow-lg hover:shadow-gold/25 sm:w-auto"
               >
                 Free Discussion & Plan
                 <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
               </a>
               <a
-                href="https://wa.me/96500000000"
+                href="https://wa.me/96597735701"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-2 rounded-full border-2 border-gold bg-white px-7 py-3.5 text-base font-semibold text-gold-dark transition-all hover:bg-gold-light"
+                className="inline-flex w-full items-center justify-center gap-2 rounded-full border-2 border-gold bg-white px-7 py-3.5 text-base font-semibold text-gold-dark transition-all hover:bg-gold-light sm:w-auto"
               >
                 <MessageCircle className="h-5 w-5" />
                 Chat on WhatsApp
@@ -55,7 +55,7 @@ export function Hero() {
             </div>
 
             {/* Trust row */}
-            <div className="opacity-0 animate-fade-in-up animation-delay-400 mt-10 flex items-center gap-4">
+            <div className="opacity-0 animate-fade-in-up animation-delay-400 mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
               <div className="flex -space-x-3">
                 {[1, 2, 3, 4].map((i) => (
                   <div
@@ -71,11 +71,6 @@ export function Hero() {
                 Trusted by local businesses across Kuwait
               </p>
             </div>
-          </div>
-
-          {/* Right mockup */}
-          <div className="opacity-0 animate-fade-in-up animation-delay-300 relative flex items-center justify-center">
-            <AdPerformanceMockup />
           </div>
         </div>
       </div>

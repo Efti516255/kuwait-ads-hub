@@ -44,7 +44,8 @@ function Index() {
         <Testimonials />
         <FAQ />
       </main>
-
+      <FinalCTA />
+      <Footer />
     </>
   );
 }

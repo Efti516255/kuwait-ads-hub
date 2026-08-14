@@ -5,6 +5,8 @@ import { Targeting } from "@/components/targeting";
 import { CampaignForm } from "@/components/campaign-form";
 import { Testimonials } from "@/components/testimonials";
 import { FAQ } from "@/components/faq";
+import { FinalCTA } from "@/components/final-cta";
+import { Footer } from "@/components/footer";
 
 
 
@@ -42,7 +44,8 @@ function Index() {
         <Testimonials />
         <FAQ />
       </main>
-
+      <FinalCTA />
+      <Footer />
     </>
   );
 }

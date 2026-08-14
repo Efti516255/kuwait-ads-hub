@@ -1,95 +1,10 @@
-import { ArrowRight, MessageCircle, TrendingUp, Users, MousePointerClick, Eye } from "lucide-react";
-
-function AdPerformanceMockup() {
-  return (
-    <div className="relative mx-auto w-full max-w-md">
-      {/* Decorative blurred blobs */}
-      <div className="absolute -left-12 -top-12 h-40 w-40 rounded-full bg-gold/20 blur-3xl animate-pulse-soft" />
-      <div className="absolute -bottom-10 -right-10 h-36 w-36 rounded-full bg-cream/60 blur-3xl animate-pulse-soft animation-delay-300" />
-
-      {/* Main dashboard card */}
-      <div className="relative rounded-2xl border border-border bg-card p-5 shadow-xl shadow-navy/5 animate-float">
-        <div className="mb-4 flex items-center justify-between">
-          <div>
-            <p className="text-xs font-medium text-muted-foreground">Ad Campaign Performance</p>
-            <p className="text-lg font-bold text-navy">+124% leads this month</p>
-          </div>
-          <span className="inline-flex items-center gap-1 rounded-full bg-gold-light px-2 py-1 text-xs font-semibold text-gold-dark">
-            <TrendingUp className="h-3 w-3" />
-            Live
-          </span>
-        </div>
-
-        {/* Mini chart */}
-        <div className="mb-4 flex items-end gap-2 rounded-xl bg-muted/50 p-4">
-          {[35, 48, 42, 60, 55, 78, 85, 72, 90, 105, 98, 120].map((h, i) => (
-            <div
-              key={i}
-              className="flex-1 rounded-t-sm bg-gold transition-all duration-700"
-              style={{ height: `${(h / 120) * 100}%`, opacity: 0.7 + (i % 3) * 0.1 }}
-            />
-          ))}
-        </div>
-
-        {/* Stat cards */}
-        <div className="grid grid-cols-2 gap-3">
-          <div className="rounded-xl border border-border bg-card p-3 shadow-sm">
-            <div className="mb-1 flex items-center gap-1.5 text-xs text-muted-foreground">
-              <Eye className="h-3.5 w-3.5 text-gold" />
-              Impressions
-            </div>
-            <p className="text-lg font-bold text-navy">48.2K</p>
-            <p className="text-xs font-medium text-gold-dark">+18%</p>
-          </div>
-          <div className="rounded-xl border border-border bg-card p-3 shadow-sm">
-            <div className="mb-1 flex items-center gap-1.5 text-xs text-muted-foreground">
-              <MousePointerClick className="h-3.5 w-3.5 text-gold" />
-              Clicks
-            </div>
-            <p className="text-lg font-bold text-navy">3,840</p>
-            <p className="text-xs font-medium text-gold-dark">+24%</p>
-          </div>
-          <div className="rounded-xl border border-border bg-card p-3 shadow-sm">
-            <div className="mb-1 flex items-center gap-1.5 text-xs text-muted-foreground">
-              <Users className="h-3.5 w-3.5 text-gold" />
-              Leads
-            </div>
-            <p className="text-lg font-bold text-navy">312</p>
-            <p className="text-xs font-medium text-gold-dark">+41%</p>
-          </div>
-          <div className="rounded-xl border border-border bg-card p-3 shadow-sm">
-            <div className="mb-1 flex items-center gap-1.5 text-xs text-muted-foreground">
-              <TrendingUp className="h-3.5 w-3.5 text-gold" />
-              ROI
-            </div>
-            <p className="text-lg font-bold text-navy">4.8x</p>
-            <p className="text-xs font-medium text-gold-dark">+12%</p>
-          </div>
-        </div>
-      </div>
-
-      {/* Floating phone card */}
-      <div className="absolute -bottom-6 -left-6 hidden w-44 rounded-2xl border border-border bg-card p-4 shadow-xl shadow-navy/5 sm:block animate-float animation-delay-200">
-        <div className="mb-2 flex items-center gap-2">
-          <div className="h-8 w-8 rounded-full bg-gold-light" />
-          <div>
-            <p className="text-xs font-semibold text-navy">New lead</p>
-            <p className="text-[10px] text-muted-foreground">Just now</p>
-          </div>
-        </div>
-        <p className="text-[10px] leading-relaxed text-muted-foreground">
-          “I found your restaurant through the Instagram ad. Can I book a table for 8?”
-        </p>
-      </div>
-    </div>
-  );
-}
+import { ArrowRight, MessageCircle } from "lucide-react";
 
 export function Hero() {
   return (
     <section
       id="home"
-      className="relative overflow-hidden bg-background pb-20 pt-32 lg:pb-28 lg:pt-40"
+      className="relative overflow-hidden bg-background pb-20 pt-36 lg:pb-28 lg:pt-44"
     >
       {/* Background decorative blobs */}
       <div className="pointer-events-none absolute inset-0 overflow-hidden">
@@ -98,9 +13,9 @@ export function Hero() {
       </div>
 
       <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
-          {/* Left content */}
-          <div className="max-w-2xl">
+        <div className="flex flex-col items-center text-center">
+          {/* Content */}
+          <div className="max-w-3xl">
             <div
               className="mb-6 inline-flex items-center gap-2 rounded-full border border-gold/20 bg-gold-light px-4 py-1.5 text-xs font-semibold text-gold-dark opacity-0 animate-fade-in-up"
             >

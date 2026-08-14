@@ -1,4 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { useState } from "react";
+import { TopBar, type Language } from "@/components/top-bar";
 import { Navbar } from "@/components/navbar";
 import { Hero } from "@/components/hero";
 import { Targeting } from "@/components/targeting";
@@ -34,14 +36,17 @@ export const Route = createFileRoute("/")({
 });
 
 function Index() {
+  const [language, setLanguage] = useState<Language>("en");
+
   return (
     <>
+      <TopBar language={language} onChange={setLanguage} />
       <Navbar />
       <main>
         <Hero />
+        <Testimonials />
         <Targeting />
         <CampaignForm />
-        <Testimonials />
         <FAQ />
       </main>
       <FinalCTA />

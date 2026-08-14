@@ -36,14 +36,17 @@ export const Route = createFileRoute("/")({
 });
 
 function Index() {
+  const [language, setLanguage] = useState<Language>("en");
+
   return (
     <>
+      <TopBar language={language} onChange={setLanguage} />
       <Navbar />
       <main>
         <Hero />
+        <Testimonials />
         <Targeting />
         <CampaignForm />
-        <Testimonials />
         <FAQ />
       </main>
       <FinalCTA />

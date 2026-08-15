@@ -1,5 +1,4 @@
 import { ArrowRight, MessageCircle } from "lucide-react";
-import logoFull from "@/assets/logo-full.png.asset.json";
 
 export function Hero() {
   return (

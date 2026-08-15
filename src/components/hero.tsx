@@ -1,11 +1,10 @@
 import { ArrowRight, MessageCircle } from "lucide-react";
-import logoFull from "@/assets/logo-full.png.asset.json";
 
 export function Hero() {
   return (
     <section
       id="home"
-      className="relative overflow-hidden bg-background pb-20 pt-36 lg:pb-28 lg:pt-44"
+      className="relative overflow-hidden bg-background pb-20 pt-28 lg:pb-28 lg:pt-36"
     >
       {/* Background decorative blobs */}
       <div className="pointer-events-none absolute inset-0 overflow-hidden">
@@ -17,19 +16,13 @@ export function Hero() {
         <div className="flex flex-col items-center text-center">
           {/* Content */}
           <div className="max-w-3xl">
-            <img
-              src={logoFull.url}
-              alt="Kuwait Ads Hub logo"
-              width={1254}
-              height={1254}
-              className="mx-auto mb-8 h-auto w-[200px] object-contain opacity-0 animate-fade-in-up sm:w-[260px] lg:w-[280px]"
-            />
             <div
               className="mb-6 inline-flex items-center gap-2 rounded-full border border-gold/20 bg-gold-light px-4 py-1.5 text-xs font-semibold text-gold-dark opacity-0 animate-fade-in-up"
             >
               <span className="h-2 w-2 rounded-full bg-gold" />
               Meta Ads Agency for Kuwait Businesses
             </div>
+
 
             <h1 className="opacity-0 animate-fade-in-up animation-delay-100 text-4xl font-extrabold leading-tight tracking-tight text-navy sm:text-5xl lg:text-6xl">
               Helping Kuwait&apos;s Local Businesses Get More Customers Through{" "}

@@ -4,7 +4,7 @@ export function Hero() {
   return (
     <section
       id="home"
-      className="relative overflow-hidden bg-background pb-20 pt-36 lg:pb-28 lg:pt-44"
+      className="relative overflow-hidden bg-background pb-20 pt-28 lg:pb-28 lg:pt-36"
     >
       {/* Background decorative blobs */}
       <div className="pointer-events-none absolute inset-0 overflow-hidden">

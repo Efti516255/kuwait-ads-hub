@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import { cn } from "@/lib/utils";
-import logoMark from "@/assets/logo-mark.png.asset.json";
+import logoMark from "@/assets/logo-mark-clean.png.asset.json";
 
 const navLinks = [
   { label: "Home", href: "#home" },
@@ -36,14 +36,19 @@ export function Navbar() {
     >
       <nav className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
         {/* Logo */}
-        <a href="#home" className="flex items-center" aria-label="Kuwait Ads Hub home">
+        <a href="#home" className="flex items-center gap-2" aria-label="Kuwait Ads Hub home">
           <img
             src={logoMark.url}
             alt="Kuwait Ads Hub logo"
-            width={1254}
-            height={727}
-            className="h-9 w-auto object-contain sm:h-11"
+            width={1488}
+            height={881}
+            loading="eager"
+            decoding="async"
+            className="h-9 w-auto shrink-0 bg-transparent object-contain mix-blend-multiply sm:h-11 dark:mix-blend-normal"
           />
+          <span className="text-base font-extrabold tracking-tight text-navy sm:text-lg">
+            Kuwait Ads Hub
+          </span>
         </a>
 
         {/* Desktop nav links */}

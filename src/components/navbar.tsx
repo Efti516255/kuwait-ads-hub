@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
-import { Menu, X, TrendingUp } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { cn } from "@/lib/utils";
+import logoMark from "@/assets/logo-mark.png.asset.json";
 
 const navLinks = [
   { label: "Home", href: "#home" },

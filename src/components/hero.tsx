@@ -1,4 +1,5 @@
 import { ArrowRight, MessageCircle } from "lucide-react";
+import logoFull from "@/assets/logo-full.png.asset.json";
 
 export function Hero() {
   return (
@@ -16,6 +17,13 @@ export function Hero() {
         <div className="flex flex-col items-center text-center">
           {/* Content */}
           <div className="max-w-3xl">
+            <img
+              src={logoFull.url}
+              alt="Kuwait Ads Hub logo"
+              width={1254}
+              height={1254}
+              className="mx-auto mb-8 h-auto w-[200px] object-contain opacity-0 animate-fade-in-up sm:w-[260px] lg:w-[280px]"
+            />
             <div
               className="mb-6 inline-flex items-center gap-2 rounded-full border border-gold/20 bg-gold-light px-4 py-1.5 text-xs font-semibold text-gold-dark opacity-0 animate-fade-in-up"
             >

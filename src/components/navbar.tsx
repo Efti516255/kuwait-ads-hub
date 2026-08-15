@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
-import { Menu, X, TrendingUp } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { cn } from "@/lib/utils";
+import logoMark from "@/assets/logo-mark.png.asset.json";
 
 const navLinks = [
   { label: "Home", href: "#home" },
@@ -35,14 +36,14 @@ export function Navbar() {
     >
       <nav className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
         {/* Logo */}
-        <a
-          href="#home"
-          className="flex items-center gap-2 text-lg font-bold tracking-tight text-navy"
-        >
-          <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-gold text-primary-foreground shadow-sm">
-            <TrendingUp className="h-5 w-5" />
-          </span>
-          <span>Kuwait Ads Hub</span>
+        <a href="#home" className="flex items-center" aria-label="Kuwait Ads Hub home">
+          <img
+            src={logoMark.url}
+            alt="Kuwait Ads Hub logo"
+            width={1254}
+            height={727}
+            className="h-9 w-auto object-contain sm:h-11"
+          />
         </a>
 
         {/* Desktop nav links */}

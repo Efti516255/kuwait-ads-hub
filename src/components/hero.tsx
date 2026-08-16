@@ -1,4 +1,5 @@
-import { ArrowRight, MessageCircle, Target } from "lucide-react";
+import { ArrowRight, MessageCircle } from "lucide-react";
+import clientPhoto from "@/assets/client-woman.jpg.asset.json";
 
 function MetaIcon({ className }: { className?: string }) {
   return (

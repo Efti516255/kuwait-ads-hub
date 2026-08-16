@@ -167,6 +167,8 @@ export function Hero() {
               </span>{" "}
               Ads
             </h1>
+            </div>
+
 
             <p className="opacity-0 animate-fade-in-up animation-delay-200 mt-6 text-lg leading-relaxed text-muted-foreground sm:text-xl">
               Done-for-you Meta Ads management for restaurants, gyms, salons, and cafes across

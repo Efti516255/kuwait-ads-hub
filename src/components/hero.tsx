@@ -81,35 +81,6 @@ export function Hero() {
         <div className="flex flex-col items-center text-center">
           {/* Content */}
           <div className="relative max-w-3xl">
-            {/* Floating platform badges around the headline */}
-            <FloatingBadge
-              label="Meta"
-              delay="0s"
-              className="-left-10 top-16 h-11 w-11 lg:-left-20 lg:h-14 lg:w-14"
-            >
-              <MetaIcon className="h-6 w-6 text-[#0668E1] lg:h-7 lg:w-7" />
-            </FloatingBadge>
-            <FloatingBadge
-              label="Ads Manager"
-              delay="1.4s"
-              className="-right-10 top-16 h-11 w-11 lg:-right-20 lg:h-14 lg:w-14"
-            >
-              <Target className="h-5 w-5 text-brand-red lg:h-6 lg:w-6" />
-            </FloatingBadge>
-            <FloatingBadge
-              label="Facebook"
-              delay="0.7s"
-              className="-left-10 bottom-24 h-11 w-11 lg:-left-20 lg:h-14 lg:w-14"
-            >
-              <FacebookIcon className="h-6 w-6 text-[#1877F2] lg:h-7 lg:w-7" />
-            </FloatingBadge>
-            <FloatingBadge
-              label="Instagram"
-              delay="2.1s"
-              className="-right-10 bottom-24 h-11 w-11 lg:-right-20 lg:h-14 lg:w-14"
-            >
-              <InstagramIcon className="h-6 w-6 lg:h-7 lg:w-7" />
-            </FloatingBadge>
 
             <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-gold/20 bg-gold-light px-4 py-1.5 text-xs font-semibold text-gold-dark opacity-0 animate-fade-in-up">
               <span className="h-2 w-2 rounded-full bg-gold" />

@@ -11,8 +11,12 @@ function MetaIcon({ className }: { className?: string }) {
 
 function FacebookIcon({ className }: { className?: string }) {
   return (
-    <svg viewBox="0 0 24 24" fill="currentColor" className={className} aria-hidden="true">
-      <path d="M13.5 21v-8h2.7l.4-3.1h-3.1V7.9c0-.9.25-1.5 1.55-1.5h1.65V3.6c-.3 0-1.3-.1-2.4-.1-2.4 0-4.05 1.45-4.05 4.15V9.9H7.5V13h2.75v8h3.25Z" />
+    <svg viewBox="0 0 24 24" className={className} aria-hidden="true">
+      <circle cx="12" cy="12" r="12" fill="#1877F2" />
+      <path
+        fill="#fff"
+        d="M15.4 15.5l.5-3.5h-3.3V9.7c0-.95.47-1.88 1.97-1.88H16V4.85s-1.33-.23-2.6-.23c-2.65 0-4.38 1.6-4.38 4.5V12H5.98v3.5H9V24a12.1 12.1 0 003.6 0v-8.5h2.8Z"
+      />
     </svg>
   );
 }
@@ -21,18 +25,20 @@ function InstagramIcon({ className }: { className?: string }) {
   return (
     <svg viewBox="0 0 24 24" className={className} aria-hidden="true">
       <defs>
-        <linearGradient id="ig-grad" x1="0" y1="1" x2="1" y2="0">
-          <stop offset="0%" stopColor="#FEDA75" />
-          <stop offset="35%" stopColor="#FA7E1E" />
-          <stop offset="65%" stopColor="#D62976" />
+        <radialGradient id="ig-grad" cx="0.3" cy="1.05" r="1.25">
+          <stop offset="0%" stopColor="#FFDD55" />
+          <stop offset="25%" stopColor="#FF9A3C" />
+          <stop offset="50%" stopColor="#FF543E" />
+          <stop offset="75%" stopColor="#D62976" />
           <stop offset="100%" stopColor="#962FBF" />
-        </linearGradient>
+        </radialGradient>
       </defs>
-      <g fill="none" stroke="url(#ig-grad)" strokeWidth="2">
-        <rect x="3" y="3" width="18" height="18" rx="5.5" />
-        <circle cx="12" cy="12" r="4" />
+      <rect x="0" y="0" width="24" height="24" rx="7" fill="url(#ig-grad)" />
+      <g fill="none" stroke="#fff" strokeWidth="1.9">
+        <rect x="5" y="5" width="14" height="14" rx="4.4" />
+        <circle cx="12" cy="12" r="3.4" />
       </g>
-      <circle cx="17.2" cy="6.8" r="1.2" fill="url(#ig-grad)" />
+      <circle cx="16.7" cy="7.3" r="1.05" fill="#fff" />
     </svg>
   );
 }

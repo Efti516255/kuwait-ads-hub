@@ -113,14 +113,14 @@ export function Hero() {
             <FloatingBadge
               label="Facebook"
               delay="0.7s"
-              className="-left-4 bottom-0 h-11 w-11 lg:-left-16 lg:h-14 lg:w-14"
+              className="-left-4 bottom-0 h-11 w-11 lg:-left-24 lg:h-14 lg:w-14"
             >
               <FacebookIcon className="h-full w-full" />
             </FloatingBadge>
             <FloatingBadge
               label="Instagram"
               delay="2.1s"
-              className="-right-4 bottom-0 h-11 w-11 lg:-right-16 lg:h-14 lg:w-14"
+              className="-right-4 bottom-0 h-11 w-11 lg:-right-24 lg:h-14 lg:w-14"
             >
               <InstagramIcon className="h-full w-full" />
             </FloatingBadge>

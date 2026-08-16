@@ -87,6 +87,44 @@ export function Hero() {
               Meta Ads Agency for Kuwait Businesses
             </div>
 
+            <div className="relative">
+            {/* Floating platform badges hugging the headline */}
+            <FloatingBadge
+              label="Meta"
+              delay="0s"
+              className="-left-2 top-0 h-11 w-11 lg:-left-10 lg:h-14 lg:w-14"
+            >
+              <MetaIcon className="h-6 w-6 text-[#0668E1] lg:h-7 lg:w-7" />
+            </FloatingBadge>
+            <FloatingBadge
+              label="Happy client"
+              delay="1.4s"
+              className="-right-2 top-0 h-11 w-11 lg:-right-10 lg:h-14 lg:w-14"
+            >
+              <img
+                src={clientPhoto.url}
+                alt="Happy client"
+                loading="lazy"
+                width={512}
+                height={512}
+                className="h-full w-full object-cover"
+              />
+            </FloatingBadge>
+            <FloatingBadge
+              label="Facebook"
+              delay="0.7s"
+              className="-left-2 bottom-0 h-11 w-11 lg:-left-10 lg:h-14 lg:w-14"
+            >
+              <FacebookIcon className="h-full w-full" />
+            </FloatingBadge>
+            <FloatingBadge
+              label="Instagram"
+              delay="2.1s"
+              className="-right-2 bottom-0 h-11 w-11 lg:-right-10 lg:h-14 lg:w-14"
+            >
+              <InstagramIcon className="h-full w-full" />
+            </FloatingBadge>
+
             <h1 className="opacity-0 animate-fade-in-up animation-delay-100 text-4xl font-extrabold leading-tight tracking-tight text-navy sm:text-5xl lg:text-6xl">
               Helping Kuwait&apos;s Local Businesses Get More{" "}
               <span className="relative inline-block">

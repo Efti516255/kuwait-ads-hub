@@ -57,7 +57,7 @@ function FloatingBadge({
   return (
     <div
       aria-label={label}
-      className={`pointer-events-none absolute hidden animate-float items-center justify-center rounded-2xl border border-border bg-card shadow-md sm:flex ${className}`}
+      className={`pointer-events-none absolute hidden animate-float items-center justify-center overflow-hidden rounded-full border border-border bg-card shadow-md sm:flex ${className}`}
       style={{ animationDelay: delay }}
     >
       {children}

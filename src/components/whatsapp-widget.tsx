@@ -35,7 +35,7 @@ export function WhatsAppWidget() {
           </button>
           <p className="text-sm font-semibold text-navy">Need more customers?</p>
           <p className="mt-1 text-xs leading-relaxed text-muted-foreground">
-            Chat with us on WhatsApp — we usually reply within minutes.
+            Chat with us on WhatsApp
           </p>
         </div>
       )}

@@ -68,7 +68,7 @@ export function Hero() {
   return (
     <section
       id="home"
-      className="relative overflow-hidden bg-background pb-20 pt-28 lg:pb-28 lg:pt-36"
+      className="relative overflow-hidden bg-background pb-24 pt-28 lg:pb-36 lg:pt-36"
     >
       {/* Background decorative blobs */}
       <div className="pointer-events-none absolute inset-0 overflow-hidden">
@@ -166,31 +166,6 @@ export function Hero() {
               </span>{" "}
               Ads
             </h1>
-            </div>
-
-
-            <p className="opacity-0 animate-fade-in-up animation-delay-200 mt-6 text-lg leading-relaxed text-muted-foreground sm:text-xl">
-              Done-for-you Meta Ads management for restaurants, gyms, salons, and cafes across
-              Kuwait.
-            </p>
-
-            {/* Trust row */}
-
-            <div className="opacity-0 animate-fade-in-up animation-delay-400 mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
-              <div className="flex -space-x-3">
-                {[1, 2, 3, 4].map((i) => (
-                  <div
-                    key={i}
-                    className="inline-flex h-10 w-10 items-center justify-center rounded-full border-2 border-background bg-muted text-xs font-semibold text-muted-foreground shadow-sm"
-                    style={{ backgroundColor: `oklch(${0.85 + i * 0.02} 0.03 ${260 + i * 10})` }}
-                  >
-                    {String.fromCharCode(64 + i)}
-                  </div>
-                ))}
-              </div>
-              <p className="text-sm font-medium text-muted-foreground">
-                Trusted by local businesses across Kuwait
-              </p>
             </div>
           </div>
         </div>

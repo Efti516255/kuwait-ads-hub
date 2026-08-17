@@ -128,7 +128,7 @@ function MarqueeRow({
 
 export function Testimonials() {
   return (
-    <section id="testimonials" className="overflow-hidden bg-background py-20 lg:py-28">
+    <section id="testimonials" className="overflow-hidden bg-background pb-20 pt-10 lg:pb-28 lg:pt-14">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <Reveal className="mx-auto max-w-3xl text-center">
           <h2 className="text-3xl font-extrabold tracking-tight text-navy sm:text-4xl">

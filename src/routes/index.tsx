@@ -9,6 +9,7 @@ import { Testimonials } from "@/components/testimonials";
 import { FAQ } from "@/components/faq";
 import { FinalCTA } from "@/components/final-cta";
 import { Footer } from "@/components/footer";
+import { WhatsAppWidget } from "@/components/whatsapp-widget";
 
 
 
@@ -51,6 +52,8 @@ function Index() {
       </main>
       <FinalCTA />
       <Footer />
+      <WhatsAppWidget />
+
     </>
   );
 }

@@ -1,5 +1,4 @@
 import clientPhoto from "@/assets/client-woman.jpg.asset.json";
-import clientPhoto from "@/assets/client-woman.jpg.asset.json";
 
 function MetaIcon({ className }: { className?: string }) {
   return (

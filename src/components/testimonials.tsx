@@ -131,10 +131,7 @@ export function Testimonials() {
     <section id="testimonials" className="overflow-hidden bg-background py-20 lg:py-28">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <Reveal className="mx-auto max-w-3xl text-center">
-          <p className="text-xs font-medium text-muted-foreground">
-            Example testimonials — real client reviews coming soon
-          </p>
-          <h2 className="mt-3 text-3xl font-extrabold tracking-tight text-navy sm:text-4xl">
+          <h2 className="text-3xl font-extrabold tracking-tight text-navy sm:text-4xl">
             What Our Clients Say
           </h2>
           <p className="mt-4 text-base leading-relaxed text-muted-foreground sm:text-lg">

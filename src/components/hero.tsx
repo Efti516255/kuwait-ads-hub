@@ -1,4 +1,4 @@
-import { ArrowRight, MessageCircle } from "lucide-react";
+import clientPhoto from "@/assets/client-woman.jpg.asset.json";
 import clientPhoto from "@/assets/client-woman.jpg.asset.json";
 
 function MetaIcon({ className }: { className?: string }) {
@@ -175,9 +175,8 @@ export function Hero() {
               Kuwait.
             </p>
 
-
-
             {/* Trust row */}
+
             <div className="opacity-0 animate-fade-in-up animation-delay-400 mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
               <div className="flex -space-x-3">
                 {[1, 2, 3, 4].map((i) => (

@@ -52,6 +52,8 @@ function Index() {
       </main>
       <FinalCTA />
       <Footer />
+      <WhatsAppWidget />
+
     </>
   );
 }

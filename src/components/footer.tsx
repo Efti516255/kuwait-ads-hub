@@ -1,7 +1,7 @@
 import { TrendingUp, Facebook, Instagram, MessageCircle } from "lucide-react";
+import { buildWhatsAppUrl } from "@/lib/whatsapp";
 
-const WHATSAPP_NUMBER = "96597735701";
-const WHATSAPP_LINK = `https://wa.me/${WHATSAPP_NUMBER}`;
+const WHATSAPP_LINK = buildWhatsAppUrl();
 
 const quickLinks = [
   { label: "Home", href: "#home" },

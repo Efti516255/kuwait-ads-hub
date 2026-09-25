@@ -1,5 +1,6 @@
 import { useCallback, useEffect, useRef, useState } from "react";
 import { Check, CheckCircle2 } from "lucide-react";
+import { buildWhatsAppUrl } from "@/lib/whatsapp";
 
 function useReveal<T extends HTMLElement>() {
   const ref = useRef<T | null>(null);
@@ -213,41 +214,44 @@ export function CampaignForm() {
   const [errors, setErrors] = useState<{ businessName?: string; whatsapp?: string }>({});
   const [submitted, setSubmitted] = useState(false);
 
-  const WHATSAPP_NUMBER = "96597735701";
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
+  const validateRequiredFields = () => {
     const next: typeof errors = {};
     if (!businessName.trim()) next.businessName = "Please enter your business name";
     if (!whatsapp.trim()) next.whatsapp = "Please enter your WhatsApp number";
     setErrors(next);
-    if (Object.keys(next).length > 0) return;
+    return Object.keys(next).length === 0;
+  };
 
-    const ageLabel = `${age[0]} – ${age[1] === MAX_AGE ? "65+" : age[1]}`;
+  const ageLabel = `${age[0]} – ${age[1] === MAX_AGE ? "65+" : age[1]}`;
 
-    const message = [
-      "New Campaign Plan Request — Kuwait Ads Hub",
-      "",
-      `Business Name: ${businessName.trim()}`,
-      `Business Type: ${businessType || "Not specified"}`,
-      `WhatsApp: ${whatsapp.trim()}`,
-      "",
-      "Target Audience:",
-      `- Age: ${ageLabel}`,
-      `- Gender: ${gender}`,
-      `- Location: ${location.trim() || "Not specified"}`,
-      `- Interests: ${interests.trim() || "Not specified"}`,
-      "",
-      `Campaign Duration: ${duration || "Not specified"}`,
-      `Monthly Budget: ${budget || "Not specified"}`,
-      "",
-      `Additional Notes: ${notes.trim() || "None"}`,
-    ].join("\n");
+  const message = [
+    "Hi Kuwait Ads Hub,",
+    "",
+    "I'd like to get my free growth plan.",
+    "",
+    `Business Name: ${businessName.trim()}`,
+    `Business Type: ${businessType || "Not specified"}`,
+    `My WhatsApp Number: ${whatsapp.trim()}`,
+    "",
+    "Campaign Preferences:",
+    `- Age: ${ageLabel}`,
+    `- Gender: ${gender}`,
+    `- Location: ${location.trim() || "Not specified"}`,
+    `- Interests: ${interests.trim() || "Not specified"}`,
+    `- Duration: ${duration || "Not specified"}`,
+    `- Monthly Budget: ${budget || "Not specified"}`,
+    "",
+    "Goals / Additional Information:",
+    notes.trim() || "None provided",
+    "",
+    "I'd like to discuss Facebook & Instagram Ads for my business.",
+  ].join("\n");
 
-    const encodedMessage = encodeURIComponent(message);
-    const whatsappUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodedMessage}`;
-
-    window.open(whatsappUrl, "_blank", "noopener,noreferrer");
+  const handlePlanClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    if (!validateRequiredFields()) {
+      e.preventDefault();
+      return;
+    }
     setSubmitted(true);
   };
 
@@ -282,7 +286,7 @@ export function CampaignForm() {
               </p>
             </div>
           ) : (
-            <form onSubmit={handleSubmit} noValidate className="space-y-10">
+            <form onSubmit={(e) => e.preventDefault()} noValidate className="space-y-10">
               {/* Audience */}
               <div>
                 <SectionTitle>Who do you want to reach?</SectionTitle>
@@ -436,13 +440,16 @@ export function CampaignForm() {
                 </div>
               </div>
 
-              <button
-                type="submit"
+              <a
+                href={buildWhatsAppUrl(message)}
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={handlePlanClick}
                 className="flex w-full items-center justify-center gap-2 rounded-xl bg-[#1877F2] px-6 py-4 text-base font-bold text-white shadow-lg shadow-[#1877F2]/25 transition-transform hover:scale-[1.01] active:scale-[0.99]"
               >
                 <Check className="h-5 w-5" />
                 Get My Free Plan
-              </button>
+              </a>
             </form>
           )}
         </div>

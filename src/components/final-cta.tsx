@@ -1,7 +1,6 @@
 import { useReveal } from "@/hooks/use-reveal";
 import { MessageCircle } from "lucide-react";
-
-const WHATSAPP_NUMBER = "96597735701";
+import { buildWhatsAppUrl } from "@/lib/whatsapp";
 
 export function FinalCTA() {
   const { ref, visible } = useReveal<HTMLDivElement>();
@@ -11,12 +10,9 @@ export function FinalCTA() {
     if (el) el.scrollIntoView({ behavior: "smooth" });
   };
 
-  const openWhatsApp = () => {
-    const message = encodeURIComponent(
-      "Hi Kuwait Ads Hub, I'm interested in a free discussion and plan for my business."
-    );
-    window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${message}`, "_blank", "noopener,noreferrer");
-  };
+  const whatsappUrl = buildWhatsAppUrl(
+    "Hi Kuwait Ads Hub, I'm interested in a free discussion and plan for my business.",
+  );
 
   return (
     <section className="relative overflow-hidden bg-gradient-to-br from-brand-red to-[#A5182F] py-20 lg:py-28">
@@ -45,14 +41,15 @@ export function FinalCTA() {
           >
             Free Discussion & Plan
           </button>
-          <button
-            type="button"
-            onClick={openWhatsApp}
+          <a
+            href={whatsappUrl}
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-flex w-full items-center justify-center gap-2 rounded-full border-2 border-white/80 bg-transparent px-8 py-3.5 text-base font-semibold text-white transition-all hover:border-white hover:bg-white/10 sm:w-auto"
           >
             <MessageCircle className="h-5 w-5" />
             Chat on WhatsApp
-          </button>
+          </a>
         </div>
       </div>
     </section>

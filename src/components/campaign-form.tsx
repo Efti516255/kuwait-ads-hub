@@ -1,5 +1,6 @@
 import { useCallback, useEffect, useRef, useState } from "react";
 import { Check, CheckCircle2 } from "lucide-react";
+import { buildWhatsAppUrl } from "@/lib/whatsapp";
 
 function useReveal<T extends HTMLElement>() {
   const ref = useRef<T | null>(null);
@@ -213,8 +214,6 @@ export function CampaignForm() {
   const [errors, setErrors] = useState<{ businessName?: string; whatsapp?: string }>({});
   const [submitted, setSubmitted] = useState(false);
 
-  const WHATSAPP_NUMBER = "96597735701";
-
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     const next: typeof errors = {};
@@ -226,29 +225,30 @@ export function CampaignForm() {
     const ageLabel = `${age[0]} – ${age[1] === MAX_AGE ? "65+" : age[1]}`;
 
     const message = [
-      "New Campaign Plan Request — Kuwait Ads Hub",
+      "Hi Kuwait Ads Hub,",
+      "",
+      "I'd like to get my free growth plan.",
       "",
       `Business Name: ${businessName.trim()}`,
       `Business Type: ${businessType || "Not specified"}`,
-      `WhatsApp: ${whatsapp.trim()}`,
+      `My WhatsApp Number: ${whatsapp.trim()}`,
       "",
-      "Target Audience:",
+      "Campaign Preferences:",
       `- Age: ${ageLabel}`,
       `- Gender: ${gender}`,
       `- Location: ${location.trim() || "Not specified"}`,
       `- Interests: ${interests.trim() || "Not specified"}`,
+      `- Duration: ${duration || "Not specified"}`,
+      `- Monthly Budget: ${budget || "Not specified"}`,
       "",
-      `Campaign Duration: ${duration || "Not specified"}`,
-      `Monthly Budget: ${budget || "Not specified"}`,
+      "Goals / Additional Information:",
+      notes.trim() || "None provided",
       "",
-      `Additional Notes: ${notes.trim() || "None"}`,
+      "I'd like to discuss Facebook & Instagram Ads for my business.",
     ].join("\n");
 
-    const encodedMessage = encodeURIComponent(message);
-    const whatsappUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodedMessage}`;
-
-    window.open(whatsappUrl, "_blank", "noopener,noreferrer");
     setSubmitted(true);
+    window.location.href = buildWhatsAppUrl(message);
   };
 
   return (

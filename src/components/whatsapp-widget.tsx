@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { X } from "lucide-react";
-
-const WHATSAPP_NUMBER = "96597735701";
+import { buildWhatsAppUrl } from "@/lib/whatsapp";
 
 function WhatsAppIcon({ className }: { className?: string }) {
   return (
@@ -13,13 +12,9 @@ function WhatsAppIcon({ className }: { className?: string }) {
 
 export function WhatsAppWidget() {
   const [showBubble, setShowBubble] = useState(true);
-
-  const openWhatsApp = () => {
-    const message = encodeURIComponent(
-      "Hi Kuwait Ads Hub, I'd like to know more about your Meta Ads services."
-    );
-    window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${message}`, "_blank", "noopener,noreferrer");
-  };
+  const whatsappUrl = buildWhatsAppUrl(
+    "Hi Kuwait Ads Hub, I'd like to discuss Facebook & Instagram Ads for my business.",
+  );
 
   return (
     <div className="fixed bottom-5 right-4 z-50 flex flex-col items-end gap-3 sm:bottom-6 sm:right-6">
@@ -40,15 +35,16 @@ export function WhatsAppWidget() {
         </div>
       )}
 
-      <button
-        type="button"
-        onClick={openWhatsApp}
+      <a
+        href={whatsappUrl}
+        target="_blank"
+        rel="noopener noreferrer"
         aria-label="Chat on WhatsApp"
         className="relative inline-flex h-14 w-14 items-center justify-center rounded-full bg-[#25D366] text-white shadow-xl transition-transform hover:scale-105"
       >
         <span className="absolute inset-0 animate-ping rounded-full bg-[#25D366] opacity-30" />
         <WhatsAppIcon className="relative h-8 w-8" />
-      </button>
+      </a>
     </div>
   );
 }

@@ -34,7 +34,7 @@ function PhoneMockup() {
             </svg>
             <div className="relative flex h-full flex-col justify-center px-6 text-left">
               <p className="text-[10px] font-semibold uppercase tracking-[0.2em] text-gold">Salmiya · Now open</p>
-              <p className="mt-2 text-2xl font-extrabold leading-tight text-card">
+              <p className="mt-2 text-xl font-extrabold leading-tight text-card sm:text-2xl">
                 Specialty coffee,<br />Kuwaiti hospitality.
               </p>
               <p className="mt-2 text-[11px] text-card/70" dir="rtl">قهوة مختصة بضيافة كويتية</p>
@@ -77,7 +77,7 @@ export function Hero() {
 
       <div className="relative mx-auto grid max-w-7xl items-center gap-14 px-5 sm:px-6 lg:grid-cols-[1.15fr_0.85fr] lg:gap-12 lg:px-8">
         <div className="text-center lg:text-left">
-          <p className="inline-flex items-center gap-2 rounded-full border border-gold/30 bg-card/70 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.14em] text-gold-dark opacity-0 animate-fade-in-up">
+          <p className="inline-flex items-center gap-2 rounded-full border border-gold/30 bg-card/70 px-4 py-1.5 text-[10px] font-semibold uppercase tracking-[0.1em] sm:text-xs sm:tracking-[0.14em] text-gold-dark opacity-0 animate-fade-in-up">
             <span className="h-1.5 w-1.5 rounded-full bg-gold" />
             Meta Ads Agency for Kuwait Businesses
           </p>

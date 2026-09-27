@@ -15,10 +15,10 @@ export function FinalCTA() {
   );
 
   return (
-    <section className="relative overflow-hidden bg-gradient-to-br from-brand-red to-[#A5182F] py-20 lg:py-28">
+    <section className="relative overflow-hidden bg-navy py-20 lg:py-28">
       {/* Decorative glow shapes */}
-      <div className="pointer-events-none absolute -left-24 -top-24 h-72 w-72 rounded-full bg-white/10 blur-3xl" />
-      <div className="pointer-events-none absolute -bottom-32 -right-32 h-80 w-80 rounded-full bg-white/10 blur-3xl" />
+      <div className="pointer-events-none absolute -left-24 -top-24 h-72 w-72 rounded-full bg-gold/15 blur-3xl" />
+      <div className="pointer-events-none absolute -bottom-32 -right-32 h-80 w-80 rounded-full bg-gold/15 blur-3xl" />
 
       <div
         ref={ref}
@@ -37,7 +37,7 @@ export function FinalCTA() {
           <button
             type="button"
             onClick={scrollToPlan}
-            className="inline-flex w-full items-center justify-center rounded-full bg-white px-8 py-3.5 text-base font-bold text-brand-red shadow-lg transition-all hover:bg-white/90 hover:shadow-xl sm:w-auto"
+            className="inline-flex w-full items-center justify-center rounded-full bg-gold px-8 py-3.5 text-base font-bold text-navy shadow-lg transition-all hover:bg-gold/90 hover:shadow-xl sm:w-auto"
           >
             Free Discussion & Plan
           </button>

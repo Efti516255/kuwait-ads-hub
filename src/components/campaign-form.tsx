@@ -181,10 +181,14 @@ function Pills({
   );
 }
 
-function Label({ children, htmlFor }: { children: React.ReactNode; htmlFor?: string }) {
+function Label({ children, htmlFor, required }: { children: React.ReactNode; htmlFor?: string; required?: boolean }) {
   return (
     <label htmlFor={htmlFor} className="mb-2 block text-sm font-medium text-muted-foreground">
       {children}
+      {required && (
+        <span className="ml-0.5 text-brand-red" aria-hidden="true">*</span>
+      )}
+      {required && <span className="sr-only"> (required)</span>}
     </label>
   );
 }
@@ -217,7 +221,10 @@ export function CampaignForm() {
   const validateRequiredFields = () => {
     const next: typeof errors = {};
     if (!businessName.trim()) next.businessName = "Please enter your business name";
+    const digits = whatsapp.replace(/\D/g, "");
     if (!whatsapp.trim()) next.whatsapp = "Please enter your WhatsApp number";
+    else if (digits.length < 8 || digits.length > 15)
+      next.whatsapp = "Please enter a valid WhatsApp number (at least 8 digits)";
     setErrors(next);
     return Object.keys(next).length === 0;
   };
@@ -276,13 +283,12 @@ export function CampaignForm() {
         <div className="mt-12 rounded-3xl border border-border bg-card p-6 shadow-xl shadow-navy/5 sm:p-9">
           {submitted ? (
             <div className="flex flex-col items-center py-10 text-center">
-              <div className="flex h-16 w-16 items-center justify-center rounded-full bg-brand-red-light">
-                <CheckCircle2 className="h-8 w-8 text-brand-red" />
+              <div className="flex h-16 w-16 items-center justify-center rounded-full bg-gold-light">
+                <CheckCircle2 className="h-8 w-8 text-gold-dark" />
               </div>
-              <h3 className="mt-6 text-xl font-bold text-navy">Thanks!</h3>
+              <h3 className="mt-6 text-xl font-bold text-navy">Almost done</h3>
               <p className="mt-3 max-w-md text-sm leading-relaxed text-muted-foreground">
-                We&apos;ve received your plan details. We&apos;ll reach out on WhatsApp within 24
-                hours to discuss your custom strategy.
+                Your message is ready in WhatsApp. Please press Send in WhatsApp to complete your enquiry.
               </p>
             </div>
           ) : (
@@ -373,7 +379,7 @@ export function CampaignForm() {
                 <SectionTitle>Tell us about your business</SectionTitle>
                 <div className="space-y-6">
                   <div>
-                    <Label htmlFor="businessName">Business name</Label>
+                    <Label htmlFor="businessName" required>Business name</Label>
                     <input
                       id="businessName"
                       value={businessName}
@@ -403,7 +409,7 @@ export function CampaignForm() {
                   </div>
 
                   <div>
-                    <Label htmlFor="whatsapp">WhatsApp number</Label>
+                    <Label htmlFor="whatsapp" required>WhatsApp number</Label>
                     <input
                       id="whatsapp"
                       type="tel"
@@ -445,7 +451,7 @@ export function CampaignForm() {
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={handlePlanClick}
-                className="flex w-full items-center justify-center gap-2 rounded-xl bg-[#1877F2] px-6 py-4 text-base font-bold text-white shadow-lg shadow-[#1877F2]/25 transition-transform hover:scale-[1.01] active:scale-[0.99]"
+                className="flex w-full items-center justify-center gap-2 rounded-xl bg-gold px-6 py-4 text-base font-bold text-navy shadow-lg shadow-gold/25 transition-transform hover:scale-[1.01] active:scale-[0.99]"
               >
                 <Check className="h-5 w-5" />
                 Get My Free Plan

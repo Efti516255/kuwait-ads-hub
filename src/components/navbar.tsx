@@ -4,11 +4,11 @@ import { cn } from "@/lib/utils";
 import logoMark from "@/assets/logo-mark-clean.png.asset.json";
 
 const navLinks = [
-  { label: "Home", href: "#home" },
-  { label: "Services", href: "#services" },
-  { label: "Pricing", href: "#pricing" },
-  { label: "FAQ", href: "#faq" },
-  { label: "Contact", href: "#contact" },
+  { label: "Home", href: "/#home" },
+  { label: "Services", href: "/#services" },
+  { label: "Pricing", href: "/#pricing" },
+  { label: "FAQ", href: "/#faq" },
+  { label: "Contact", href: "/#contact" },
 ];
 
 export function Navbar() {
@@ -25,7 +25,7 @@ export function Navbar() {
   return (
     <header
       className={cn(
-        "fixed inset-x-0 top-9 z-50 transition-all duration-300",
+        "fixed inset-x-0 top-0 z-50 transition-all duration-300",
         scrolled
           ? "bg-background/95 shadow-sm backdrop-blur-sm"
           : "bg-transparent"
@@ -36,7 +36,7 @@ export function Navbar() {
     >
       <nav className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
         {/* Logo */}
-        <a href="#home" className="flex items-center gap-2" aria-label="Kuwait Ads Hub home">
+        <a href="/#home" className="flex items-center gap-2" aria-label="Kuwait Ads Hub home">
           <img
             src={logoMark.url}
             alt="Kuwait Ads Hub logo"
@@ -65,15 +65,6 @@ export function Navbar() {
           ))}
         </ul>
 
-        {/* Desktop CTA */}
-        <div className="hidden items-center gap-4 md:flex">
-          <a
-            href="#contact"
-            className="text-sm font-medium text-muted-foreground transition-colors hover:text-navy"
-          >
-            Log In
-          </a>
-        </div>
 
         {/* Mobile toggle */}
         <div className="flex items-center gap-2 md:hidden">
@@ -108,15 +99,6 @@ export function Navbar() {
               </a>
             </li>
           ))}
-          <li className="mt-2 border-t border-border pt-2">
-            <a
-              href="#contact"
-              onClick={() => setMobileOpen(false)}
-              className="block rounded-lg px-3 py-2.5 text-sm font-medium text-muted-foreground transition-colors hover:bg-muted hover:text-navy"
-            >
-              Log In
-            </a>
-          </li>
         </ul>
       </div>
     </header>

@@ -185,6 +185,10 @@ function Label({ children, htmlFor, required }: { children: React.ReactNode; htm
   return (
     <label htmlFor={htmlFor} className="mb-2 block text-sm font-medium text-muted-foreground">
       {children}
+      {required && (
+        <span className="ml-0.5 text-brand-red" aria-hidden="true">*</span>
+      )}
+      {required && <span className="sr-only"> (required)</span>}
     </label>
   );
 }
